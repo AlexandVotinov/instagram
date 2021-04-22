@@ -1,0 +1,33 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap' rel='stylesheet')
+  script(src='https://kit.fontawesome.com/4eb923eb5b.js' crossorigin='anonymous')
+  link(rel='stylesheet' href='/css/main.css')
+  title Instagram
+main
+  .main-authentication-block
+    .main-authentication-block--form
+      .main-authentication-block--form_logo
+        img(src='/img/logo.png' alt='instagram_logo')
+      .main-authentication-block--form_fields
+        form
+          input(id="login_nickname" type='text' placeholder='Имя пользователя')
+          input(id="login_password" type='password' placeholder='Пароль')
+          input(id="login_submit" type='submit' value='Войти')
+      .main-authentication-block--form_alternative
+        .main-authentication-block--form_alternative__line
+          span ИЛИ
+      .main-authentication-block--form_facebook
+        a(href='#')
+          i.fab.fa-facebook-square
+          |  Войти через Facebook
+      .main-authentication-block--form_password-recovery
+        a(href='#') Забыли пароль?
+    .main-authentication-block--register
+      | У вас ещё нет аккаунта? 
+      a(href='/auth/registration') Регистрация
+script(src='/js/login.js')
